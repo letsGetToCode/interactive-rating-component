@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Colors */
+  --clr-orange: hsl(25, 97%, 53%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-grey: hsl(217, 12%, 63%);
+  --clr-medium-grey: hsl(216, 12%, 54%);
+  --clr-dark-blue: hsl(213, 19%, 18%);
+  --clr-darker-blue: hsl(216, 12%, 8%);
+  
+  /* Typography */
+  --fw-regular: 400;
+  --fw-bold: 700;
+} 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p{
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--clr-darker-blue);
+  font-family: "Overpass", sans-serif;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-medium-grey);
+}
+
+.box { 
+  /* width: min(350px, 87%); */
+  max-width: 410px;
+  height: 410px;
+  border-radius: 16px; 
+  background-color: var(--clr-dark-blue);
+  background-image: linear-gradient(to bottom, var(--clr-dark-blue), var(--clr-darker-blue));
+  padding: 30px 34px;
+}
+
+.icon-wrapper {
+  width: 48px;
+  height:48px;
+  border-radius: 50%;
+  background-color: var(--clr-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+.box h1 { 
+  color: var(--clr-white);
+  margin-bottom: 18px;
+  font-weight: var(--fw-bold);
+}
+
+.box p {
+  font-weight: var(--fw-regular);
+  line-height: 24px;
+}
+
+.rating{ 
+  display: flex;
+  justify-content: space-between;
+  margin-block: 30px;
+}
+
+.rating button { 
+  height: 52px;
+  width: 52px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-medium-grey);
+  cursor: pointer;
+}
+
+.rating button:active {
+  background-color: var(--clr-light-grey);
+}
+
+.rating button:hover {
+  color:var(--clr-white);
+  background-color: var(--clr-orange);
+}
+
+.submit {
+  border: 1px solid red;
+  text-align: center;
+  background-color: var(--clr-orange);
+  color: var(--clr-white);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  letter-spacing: 2px;
+  padding-block: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  color: var(--clr-orange);
+  background-color: var(--clr-white);
+}
+
+
+
+.thank-you {
+  display: none;
+}
