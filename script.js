@@ -6,6 +6,8 @@ const thankYouBtn = document.querySelector('h2');
 const wrapper = document.querySelector('.wrapper');
 const ratingResult = document.querySelector('.rating-result');
 
+let userRating;
+
 btns.forEach((btn)=>{
   btn.addEventListener('click', ()=>{
     btns.forEach((otherBtn) => {
@@ -14,15 +16,19 @@ btns.forEach((btn)=>{
 
     btn.classList.add('active');
 
-    let userRating = btn.value;
+    userRating = btn.value;
 
     ratingResult.textContent = userRating;
   })
 })
 
 submitBtn.addEventListener('click', ()=>{
-  startBox.style = 'display: none';
-  thankYouBox.style = 'display:flex;'
+  if(userRating === undefined) {
+    alert('Please chose a number')
+  } else{
+    startBox.style = 'display: none';
+    thankYouBox.style = 'display:flex';
+  }
 })
 
 wrapper.addEventListener('click', ()=>{
