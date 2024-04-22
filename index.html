@@ -17,7 +17,7 @@
 
   <div class="start box"> 
     <div class="icon-wrapper">
-      <img src="./images/icon-star.svg" alt="star icon">
+        <img src="./images/icon-star.svg" alt="star icon">
     </div><!-- Rating state start -->
 
     <h1>
@@ -29,11 +29,11 @@
     </p>
 
     <div class="rating">
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>5</button>
+      <button class="btn" value="1">1</button>
+      <button class="btn" value="2">2</button>
+      <button class="btn" value="3">3</button>
+      <button class="btn" value="4">4</button>
+      <button class="btn" value="5">5</button>
     </div>     
 
     <div class="submit">
@@ -45,15 +45,19 @@
 
   <div class="thank-you box"> <!-- Thank you state start -->
 
-    <img src="./images/illustration-thank-you.svg" alt="" />
-
-    <div class="result">
-      You selected <!-- Add rating here --> out of 5
+    <div class="img-wrapper">
+      <img src="./images/illustration-thank-you.svg" alt=" An image of a cellphone printing a receipt as a result" />
     </div>
 
-    <h2>
-      Thank you
-    </h2>
+    <div class="result">
+      You selected <span class="rating-result"><!--USER RATING--></span> out of 5
+    </div>
+
+    <div class="wrapper">
+      <h2>
+        Thank you!
+      </h2>
+    </div>
 
     <p>
       We appreciate you taking the time to give a rating. If you ever need more support, 
@@ -61,5 +65,8 @@
     </p>
 
   </div> <!-- Thank you state end -->
+
+
+<script src="script.js"></script>
 </body>
 </html>
