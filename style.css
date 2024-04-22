@@ -24,7 +24,7 @@ p{
   font-size: 15px;
 }
 
-body {
+body { position: relative; top: 0;
   background-color: var(--clr-darker-blue);
   font-family: "Overpass", sans-serif;
   min-height: 100dvh;
@@ -155,9 +155,17 @@ body {
   margin-top: 14px;
 }
 
-
-
 .active { 
  background-color: var(--clr-light-grey);
  color: var(--clr-white);
+}
+
+@media (max-width:450px) {
+  .box {
+    max-width: 380px;
+    min-width: 335px;
+    padding: 30px 20px;
+    margin: 20px;
+    text-align: left;
+  }
 }
